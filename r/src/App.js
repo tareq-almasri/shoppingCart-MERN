@@ -1,0 +1,16 @@
+import React from 'react';
+import './App.css';
+import Container from './components/Container'
+
+function App() {
+  return (
+    <div className="App">
+       
+         <Container />
+       
+      <footer>CDT &copy 2019</footer>
+    </div>
+  );
+}
+
+export default App;

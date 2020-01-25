@@ -1,0 +1,48 @@
+header {
+    font-size: 1.5rem;
+    height: 80px;
+    width: 100%;
+    padding: 20px 7%;
+    position: fixed;
+    background-color: black;
+    color: white;
+    z-index: 1;
+}
+
+header a {
+    float: right;
+    font-size: 1rem;
+}
+
+footer {
+    padding: 40px;
+    height: 120px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+.box{
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 60vh;
+    background-color: rgb(71, 71, 71);
+}
+
+.card {
+    flex-grow: 1;
+    min-width: 300px;
+    margin: 3px;
+}
+button a:hover {
+    text-decoration: none;
+    color: white;
+}
+button a {
+    color: white;
+}
+.prev:hover, .next:hover {
+    cursor: pointer;
+    color: black;
+}
