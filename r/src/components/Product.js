@@ -14,17 +14,17 @@ class Product extends Component {
 
   addToCart=()=>{
     const  { id }  = this.props.match.params;
-    fetch(`/shopping-cart/${id}`, {
-        method: "POST",
-      })
-        .then(response => response.json())
-        .then(json => console.log(json));
+    fetch(`https://shopping-cart-mu.now.sh/shopping-cart/${id}`, {
+      method: "POST"
+    })
+      .then(response => response.json())
+      .then(json => console.log(json));
     
   }
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    fetch(`/product-view/${id}`)
+    fetch(`https://shopping-cart-mu.now.sh/product-view/${id}`)
       .then(res => res.json())
       .then(phoneObj => this.setState({ phoneObj }));
   }

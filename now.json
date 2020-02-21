@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "builds": [{ "src": "server.js", "use": "@now/node-server" }],
+  "routes": [
+    {
+      "src": "/product-listing",
+      "dest": "/server.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/shopping-cart",
+      "dest": "/server.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/product-view",
+      "dest": "/server.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/shopping-cart",
+      "dest": "/server.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/shopping-cart",
+      "dest": "/server.js",
+      "methods": ["PATCH"]
+    },
+    {
+      "src": "/shopping-cart",
+      "dest": "/server.js",
+      "methods": ["DELETE"]
+    }
+  ]
+}

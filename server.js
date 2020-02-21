@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 const Phone = require("./models/phones.model");
 const Cart = require("./models/cart.model");
 
-//to create some documents in collection Phone in our database (only run it once)
-// const oldDB=require('./data/db.json');
+// to create some documents in collection Phones in our database (only run it once)
+// const oldDB=require('./db.json');
 // mongoose.connection.once('open', () => {
 //     for(let i=0; i<15; i++){
 //       Phone.create({
@@ -25,8 +25,11 @@ const connOptions = {
   useUnifiedTopology: true,
   useFindAndModify: false
 };
-const dbName = "phones";
-mongoose.connect(`mongodb://localhost/${dbName}`, connOptions);
+// const dbName = "phones";
+mongoose.connect(
+  "mongodb+srv://alef:hello123@cluster0-2yq8x.mongodb.net/e-shop?retryWrites=true&w=majority",
+  connOptions
+);
 
 app.listen(5000, () => {
   console.log("start listening on port 5000");
@@ -40,7 +43,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: false}));
 
 app.get("/product-listing/", (req, res) => {
   Phone.find()

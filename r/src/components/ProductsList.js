@@ -6,7 +6,6 @@ import {
   Link,
   NavLink
 } from "react-router-dom";
-import Product from "./Product";
 
 class ProductsList extends Component {
   state = {
@@ -14,7 +13,7 @@ class ProductsList extends Component {
   };
 
   componentDidMount() {
-    fetch("/product-listing/")
+    fetch("https://shopping-cart-mu.now.sh/product-listing/")
       .then(res => res.json())
       .then(arr => this.setState({ arr }));
   }

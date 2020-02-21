@@ -1,10 +1,10 @@
 { "homepage": "http://tareq-almasri.github.io/shoppingCart-MERN",
-  "name": "shopping-cart",
+  "name": "now-express",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "server": "nodemon server.js",
     "r": "npm start --prefix r",
     "dev": "concurrently \"npm run server\" \"npm run r\" ",
@@ -16,7 +16,8 @@
   "dependencies": {
     "concurrently": "^5.0.2",
     "express": "^4.17.1",
-    "mongoose": "^5.8.9"
+    "mongoose": "^5.8.9",
+    "nodemon": "^2.0.2"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0"

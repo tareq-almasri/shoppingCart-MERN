@@ -27,6 +27,6 @@ const phoneSchema = new mongoose.Schema(
   { versionKey: false }
 );
 
-const Phone = mongoose.model("phone", phoneSchema);
+const Phone = mongoose.model("phones", phoneSchema);
 
 module.exports = Phone;

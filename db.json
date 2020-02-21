@@ -1,0 +1,137 @@
+[
+  {
+    "_id": "5e25f61ce206ff1fa8d28d07",
+    "img": "https://picsum.photos/200/200",
+    "brand": "iPhone",
+    "model": "S1",
+    "color": "Black",
+    "price": "425",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d09",
+    "img": "https://picsum.photos/200/200",
+    "brand": "iPhone",
+    "model": "S3",
+    "color": "Silver",
+    "price": "725",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d0a",
+    "img": "https://picsum.photos/200/200",
+    "brand": "iPhone",
+    "model": "S4",
+    "color": "white",
+    "price": "1050",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d0b",
+    "img": "https://picsum.photos/200/200",
+    "brand": "iPhone",
+    "model": "S5",
+    "color": "white",
+    "price": "825",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d0d",
+    "img": "https://picsum.photos/200/200",
+    "brand": "SAMSONG",
+    "model": "S7",
+    "color": "Red",
+    "price": "650",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d08",
+    "img": "https://picsum.photos/200/200",
+    "brand": "iPhone",
+    "model": "S2",
+    "color": "Black",
+    "price": "550",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d0c",
+    "img": "https://picsum.photos/200/200",
+    "brand": "iPhone",
+    "model": "S6",
+    "color": "Pink",
+    "price": "950",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d12",
+    "img": "https://picsum.photos/200/200",
+    "brand": "SAMSONG",
+    "model": "S8",
+    "color": "Pink",
+    "price": "350",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d0f",
+    "img": "https://picsum.photos/200/200",
+    "brand": "SAMSONG",
+    "model": "S9",
+    "color": "Sliver",
+    "price": "250",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d0e",
+    "img": "https://picsum.photos/200/200",
+    "brand": "SAMSONG",
+    "model": "S8",
+    "color": "Pink",
+    "price": "350",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d11",
+    "img": "https://picsum.photos/200/200",
+    "brand": "SAMSONG",
+    "model": "S11",
+    "color": "white",
+    "price": "800",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d13",
+    "img": "https://picsum.photos/200/200",
+    "brand": "SAMSONG",
+    "model": "S9",
+    "color": "Sliver",
+    "price": "250",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d14",
+    "img": "https://picsum.photos/200/200",
+    "brand": "SAMSONG",
+    "model": "S10",
+    "color": "Black",
+    "price": "500",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d10",
+    "img": "https://picsum.photos/200/200",
+    "brand": "SAMSONG",
+    "model": "S10",
+    "color": "Black",
+    "price": "500",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  },
+  {
+    "_id": "5e25f61ce206ff1fa8d28d15",
+    "img": "https://picsum.photos/200/200",
+    "brand": "SAMSONG",
+    "model": "S11",
+    "color": "white",
+    "price": "800",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis repellat dignissimos ratione, explicabo natus nemo rem labore obcaecati architecto cupiditate numquam excepturi eos velit molestias a autem veritatis laborum dolor."
+  }
+]
