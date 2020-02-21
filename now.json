@@ -3,7 +3,7 @@
   "builds": [{ "src": "server.js", "use": "@now/node-server" }],
   "routes": [
     { "src": "/(.*)",
-    "dest": "200.js",
+    "dest": "server.js",
     "headers": {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "OPTIONS",
