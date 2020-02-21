@@ -1,4 +1,4 @@
-{
+{ "homepage": "http://tareq-almasri.github.io/shoppingCart-MERN",
   "name": "shopping-cart",
   "version": "1.0.0",
   "description": "",
@@ -7,7 +7,9 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "r": "npm start --prefix r",
-    "dev": "concurrently \"npm run server\" \"npm run r\" "
+    "dev": "concurrently \"npm run server\" \"npm run r\" ",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "tareq",
   "license": "ISC",
@@ -15,5 +17,8 @@
     "concurrently": "^5.0.2",
     "express": "^4.17.1",
     "mongoose": "^5.8.9"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
