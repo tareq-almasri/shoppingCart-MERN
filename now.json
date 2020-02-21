@@ -5,32 +5,62 @@
     {
       "src": "/product-listing",
       "dest": "/server.js",
-      "methods": ["GET"]
+      "methods": ["GET"],
+      "headers": {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*"
+      }
     },
     {
       "src": "/shopping-cart",
       "dest": "/server.js",
-      "methods": ["GET"]
+      "methods": ["GET"],
+      "headers": {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*"
+      }
     },
     {
       "src": "/product-view",
       "dest": "/server.js",
-      "methods": ["GET"]
+      "methods": ["GET"],
+      "headers": {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*"
+      }
     },
     {
       "src": "/shopping-cart",
       "dest": "/server.js",
-      "methods": ["POST"]
+      "methods": ["POST"],
+      "headers": {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*"
+      }
     },
     {
       "src": "/shopping-cart",
       "dest": "/server.js",
-      "methods": ["PATCH"]
+      "methods": ["PATCH"],
+      "headers": {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*"
+      }
     },
     {
       "src": "/shopping-cart",
       "dest": "/server.js",
-      "methods": ["DELETE"]
+      "methods": ["DELETE"],
+      "headers": {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*"
+      }
     }
   ]
 }
