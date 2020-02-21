@@ -13,7 +13,7 @@ class ProductsList extends Component {
   };
 
   componentDidMount() {
-    fetch("https://shopping-cart-mu.now.sh/product-listing/")
+    fetch("https://shopping-cart.onigiri.now.sh/product-listing/")
       .then(res => res.json())
       .then(arr => this.setState({ arr }));
   }

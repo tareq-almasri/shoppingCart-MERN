@@ -4,12 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon server.js",
-    "r": "npm start --prefix r",
-    "dev": "concurrently \"npm run server\" \"npm run r\" ",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "node index.js"
+    
   },
   "author": "tareq",
   "license": "ISC",

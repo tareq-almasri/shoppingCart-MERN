@@ -14,7 +14,7 @@ class Product extends Component {
 
   addToCart=()=>{
     const  { id }  = this.props.match.params;
-    fetch(`https://shopping-cart-mu.now.sh/shopping-cart/${id}`, {
+    fetch(`https://shopping-cart.onigiri.now.sh/shopping-cart/${id}`, {
       method: "POST"
     })
       .then(response => response.json())
@@ -24,7 +24,7 @@ class Product extends Component {
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    fetch(`https://shopping-cart-mu.now.sh/product-view/${id}`)
+    fetch(`https://shopping-cart.onigiri.now.sh/product-view/${id}`)
       .then(res => res.json())
       .then(phoneObj => this.setState({ phoneObj }));
   }
