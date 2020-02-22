@@ -6,7 +6,7 @@ class Cart extends Component {
   };
 
   deleteFromCart = id => {
-    fetch(`https://shopping-cart.onigiri.now.sh/shopping-cart/${id}`, {
+    fetch(`https://localhost:5000/shopping-cart/${id}`, {
       method: "DELETE"
     })
       .then(response => response.json())
@@ -14,7 +14,7 @@ class Cart extends Component {
   };
 
   updateQuantity = id => event => {
-    fetch(`https://shopping-cart.onigiri.now.sh/shopping-cart/${id}`, {
+    fetch(`https://localhost:5000/shopping-cart/${id}`, {
       method: "PATCH",
       body: JSON.stringify({ quantity: event.target.value }),
       headers: { "Content-Type": "application/json" }
@@ -24,7 +24,7 @@ class Cart extends Component {
   };
 
   componentDidMount() {
-    fetch("https://shopping-cart.onigiri.now.sh/shopping-cart")
+    fetch("https://localhost:5000/shopping-cart")
       .then(res => res.json())
       .then(arr => this.setState({ arr }));
   }
