@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const Phone = require("./models/phones.model");
 const Cart = require("./models/cart.model");
+require('dotenv').config()
 
 // to create some documents in collection Phones in our database (only run it once)
 // const oldDB=require('./db.json');
@@ -31,7 +32,8 @@ mongoose.connect(
   connOptions
 );
 
-app.listen(5000, () => {
+const port=process.env.PORT || 5000
+app.listen(port, () => {
   console.log("start listening on port 5000");
 });
 
