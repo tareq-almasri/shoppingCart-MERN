@@ -112,3 +112,12 @@ app.patch("/shopping-cart/:id", (req, res) => {
     })
     .catch(err => res.status(400).json("Error: " + err));
 });
+
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("r/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "r", "build", "index.html"));
+  });
+}
