@@ -48,6 +48,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.get("/product-listing/", (req, res) => {
+  res.setHeader("ACCESS-CONTROL-ALLOW-ORIGIN", "*");
   Phone.find()
     .then(phones => res.send(phones))
     .catch(err => res.status(400).send("Error: " + err));

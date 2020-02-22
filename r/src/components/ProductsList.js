@@ -13,37 +13,31 @@ class ProductsList extends Component {
   };
 
   componentDidMount() {
-    fetch("https://shopping-cart.onigiri.now.sh/product-listing/", {
-      method: "GET",
-      headers: { "Content-Type": "application/json" }
-    })
+    fetch("https://shopping-cart.onigiri.now.sh/product-listing/")
       .then(res => res.json())
       .then(arr => this.setState({ arr }));
   }
 
   render() {
     return (
-      
-        <Fragment>
-          {this.state.arr.map(x => (
-            <div className="card text-white bg-dark" key={x._id}>
-              <img src={x.img} className="card-img-top" alt="phonePic" />
-              <div className="card-body">
-                <h5 className="card-title">
-                  {x.brand} {x.model}
-                </h5>
-                <p className="card-text">Color: {x.color}</p>
-                <p className="card-text">Price: {x.price} $</p>
+      <Fragment>
+        {this.state.arr.map(x => (
+          <div className="card text-white bg-dark" key={x._id}>
+            <img src={x.img} className="card-img-top" alt="phonePic" />
+            <div className="card-body">
+              <h5 className="card-title">
+                {x.brand} {x.model}
+              </h5>
+              <p className="card-text">Color: {x.color}</p>
+              <p className="card-text">Price: {x.price} $</p>
 
-                <Link to={`/product/${x._id}`} key={x._id}><div className="btn btn-primary">
-                  View Phone </div>
-                </Link>
-              </div>
+              <Link to={`/product/${x._id}`} key={x._id}>
+                <div className="btn btn-primary">View Phone </div>
+              </Link>
             </div>
-          ))}
-          
-        </Fragment>
-      
+          </div>
+        ))}
+      </Fragment>
     );
   }
 }
