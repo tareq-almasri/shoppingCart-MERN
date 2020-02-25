@@ -1,30 +1,23 @@
 import React, { Component, Fragment } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-  NavLink
-} from "react-router-dom";
+import {Link } from "react-router-dom";
 
 class Product extends Component {
   state = {
     phoneObj: {}
   };
 
-  addToCart=()=>{
-    const  { id }  = this.props.match.params;
-    fetch(`https://localhost:5000/shopping-cart/${id}`, {
+  addToCart = () => {
+    const { id } = this.props.match.params;
+    fetch(`http://localhost:5000/shopping-cart/${id}`, {
       method: "POST"
     })
       .then(response => response.json())
       .then(json => console.log(json));
-    
-  }
+  };
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    fetch(`https://localhost:5000/product-view/${id}`)
+    fetch(`http://localhost:5000/product-view/${id}`)
       .then(res => res.json())
       .then(phoneObj => this.setState({ phoneObj }));
   }
@@ -56,8 +49,12 @@ class Product extends Component {
             {this.state.phoneObj.description}
           </div>
         </div>
-        <div style={{width: "100%", padding: "20px", textAlign: "center"}}>
-          <button type="button" onClick={this.addToCart()} className="btn add btn-danger">
+        <div style={{ width: "100%", padding: "20px", textAlign: "center" }}>
+          <button
+            type="button"
+            onClick={this.addToCart()}
+            className="btn add btn-danger"
+          >
             Add to Cart
           </button>
           <button type="button" className="btn btn-success">

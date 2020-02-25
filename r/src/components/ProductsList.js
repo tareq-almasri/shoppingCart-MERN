@@ -1,11 +1,5 @@
 import React, { Component, Fragment } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-  NavLink
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class ProductsList extends Component {
   state = {
@@ -13,7 +7,7 @@ class ProductsList extends Component {
   };
 
   componentDidMount() {
-    fetch("https://localhost:5000/product-listing/")
+    fetch("http://localhost:5000/product-listing/")
       .then(res => res.json())
       .then(arr => this.setState({ arr }));
   }

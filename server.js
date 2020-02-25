@@ -27,13 +27,11 @@ const connOptions = {
   useFindAndModify: false
 };
 // const dbName = "phones";
-mongoose.connect(
-  "mongodb+srv://alef:hello123@cluster0-2yq8x.mongodb.net/e-shop?retryWrites=true&w=majority",
-  connOptions
-);
+// `mongodb://localhost/${dbName}`
+mongoose.connect("mongodb+srv://alef:hello123@cluster0-2yq8x.mongodb.net/e-shop?retryWrites=true&w=majority", connOptions);
 
 const port=process.env.PORT || 5000
-app.listen(port, () => {
+app.listen(5000, () => {
   console.log("start listening on port 5000");
 });
 
@@ -48,7 +46,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.get("/product-listing/", (req, res) => {
-  res.setHeader("ACCESS-CONTROL-ALLOW-ORIGIN", "*");
   Phone.find()
     .then(phones => res.send(phones))
     .catch(err => res.status(400).send("Error: " + err));

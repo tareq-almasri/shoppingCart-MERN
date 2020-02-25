@@ -27,13 +27,16 @@ footer {
     display: flex;
     flex-wrap: wrap;
     min-height: 60vh;
-    background-color: rgb(71, 71, 71);
+    background-color: rgb(49, 48, 48);
 }
 
 .card {
     flex-grow: 1;
     min-width: 300px;
-    margin: 3px;
+    margin: 70px;
+    padding: 3px;
+    border-radius: 50px;
+    box-shadow: 15px 20px rgba(0, 0, 0, 0.466);
 }
 button a:hover {
     text-decoration: none;

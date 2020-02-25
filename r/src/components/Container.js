@@ -4,7 +4,7 @@ import {
   Route,
   Switch,
   Link,
-  NavLink
+ 
 } from "react-router-dom";
 import ProductsList from "./ProductsList";
 import Product from "./Product";
