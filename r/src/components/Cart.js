@@ -92,8 +92,7 @@ class Cart extends Component {
                           </th>
 
                           <td className="border-0 align-middle price">
-                            {" "}
-                            {x.price} $
+                            ${x.price}
                           </td>
 
                           <td className="align-middle">
