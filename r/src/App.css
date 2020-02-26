@@ -25,6 +25,7 @@ footer {
 .box{
     padding-top: 80px;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     min-height: 60vh;
     background-color: rgb(49, 48, 48);

@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const Phone = require("./models/phones.model");
 const Cart = require("./models/cart.model");
-require('dotenv').config()
+require("dotenv").config();
 
 // to create some documents in collection Phones in our database (only run it once)
 // const oldDB=require('./db.json');
@@ -28,10 +28,13 @@ const connOptions = {
 };
 // const dbName = "phones";
 // `mongodb://localhost/${dbName}`
-mongoose.connect("mongodb+srv://alef:hello123@cluster0-2yq8x.mongodb.net/e-shop?retryWrites=true&w=majority", connOptions);
+mongoose.connect(
+  "mongodb+srv://alef:hello123@cluster0-2yq8x.mongodb.net/e-shop?retryWrites=true&w=majority",
+  connOptions
+);
 
-const port=process.env.PORT || 5000
-app.listen(5000, () => {
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
   console.log("start listening on port 5000");
 });
 
@@ -43,7 +46,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/product-listing/", (req, res) => {
   Phone.find()
@@ -66,12 +69,9 @@ app.get("/product-view/:id", (req, res) => {
 });
 
 app.post("/shopping-cart/:id", (req, res) => {
-  Cart.findByIdAndUpdate(req.params.id)
+  Cart.findById(req.params.id)
     .then(x => {
-      if (x !== null) {
-        x.quantity += 1;
-        x.save();
-      } else {
+      if (!x) {
         Phone.findById(req.params.id)
           .then(phone => {
             Cart.create({
@@ -90,6 +90,9 @@ app.post("/shopping-cart/:id", (req, res) => {
               .catch(err => res.status(400).json("Error: " + err));
           })
           .catch(err => res.status(400).json("Error: " + err));
+      } else {
+        x.quantity += 1;
+        x.save();
       }
     })
     .catch(err => res.status(400).json("Error cart quantity: " + err));
@@ -106,7 +109,9 @@ app.patch("/shopping-cart/:id", (req, res) => {
     .then(phone => {
       phone.quantity = req.body.quantity;
       phone.save();
+      console.log("db updated");
     })
+    .then(() => Cart.find().then(x=>res.json(x)))
     .catch(err => res.status(400).json("Error: " + err));
 });
 

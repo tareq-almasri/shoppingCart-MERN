@@ -2,7 +2,9 @@ import React, { Component } from "react";
 
 class Cart extends Component {
   state = {
-    arr: []
+    arr: [],
+    total: 0
+    
   };
 
   deleteFromCart = id => {
@@ -10,23 +12,28 @@ class Cart extends Component {
       method: "DELETE"
     })
       .then(response => response.json())
-      .then(json => console.log(json));
+      .then(() => this.componentDidMount());
+      
   };
 
-  updateQuantity = id => event => {
+  updateQuantity =(value, id) => {
     fetch(`http://localhost:5000/shopping-cart/${id}`, {
       method: "PATCH",
-      body: JSON.stringify({ quantity: event.target.value }),
+      body: JSON.stringify({ quantity: value }),
       headers: { "Content-Type": "application/json" }
-    })
-      .then(response => response.json())
-      .then(json => console.log(json));
+    }).then(response => response.json())
+      .then(() => this.componentDidMount());
   };
 
   componentDidMount() {
     fetch("http://localhost:5000/shopping-cart")
       .then(res => res.json())
-      .then(arr => this.setState({ arr }));
+      .then(arr =>
+        this.setState({
+          arr: arr,
+          total: arr.reduce((total, x) => (total += x.quantity * x.price), 0)
+        })
+      );
   }
 
   render() {
@@ -58,7 +65,6 @@ class Cart extends Component {
                     </thead>
 
                     <tbody>
-
                       {this.state.arr.map(x => (
                         <tr key={x._id}>
                           <th scope="row" className="border-0">
@@ -78,10 +84,7 @@ class Cart extends Component {
 
                                 <span className="text-muted font-weight-normal font-italic d-block">
                                   <div className="5">
-                                    <div className="1">
-                                      Lorem ipsum dolor sit amet consectetur,
-                                      adipisicing elit.{" "}
-                                    </div>
+                                    <div className="1">{x.description}</div>
                                   </div>
                                 </span>
                               </div>
@@ -95,8 +98,8 @@ class Cart extends Component {
 
                           <td className="align-middle">
                             <input
-                              className="w-50 quant"
-                              onChange={this.updateQuantity(x._id)}
+                              className="w-50"
+                              onChange={(e)=>this.updateQuantity(e.target.value, x._id)}
                               type="number"
                               min="1"
                               value={x.quantity}
@@ -106,14 +109,13 @@ class Cart extends Component {
                           <td className="align-middle">
                             <button
                               className="del"
-                              onClick={this.deleteFromCart(x._id)}
+                              onClick={this.deleteFromCart.bind(this, x._id)}
                             >
                               delete
                             </button>
                           </td>
                         </tr>
                       ))}
-                      
                     </tbody>
 
                     <tbody>
@@ -122,6 +124,7 @@ class Cart extends Component {
                           <span>total</span>
                           <br />
                           <input
+                            value={this.state.total}
                             className="w-50 rounded-top-sm text-right total"
                             type="number"
                             disabled

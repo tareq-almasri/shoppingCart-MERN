@@ -8,7 +8,7 @@ function App() {
        
          <Container />
        
-      <footer>Tareq Almasri &copy 2019</footer>
+      <footer>Tareq Almasri &copy; 2019</footer>
     </div>
   );
 }
