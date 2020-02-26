@@ -8,7 +8,7 @@ class Cart extends Component {
   };
 
   deleteFromCart = id => {
-    fetch(`http://localhost:5000/shopping-cart/${id}`, {
+    fetch(`/shopping-cart/${id}`, {
       method: "DELETE"
     })
       .then(response => response.json())
@@ -17,7 +17,7 @@ class Cart extends Component {
   };
 
   updateQuantity =(value, id) => {
-    fetch(`http://localhost:5000/shopping-cart/${id}`, {
+    fetch(`/shopping-cart/${id}`, {
       method: "PATCH",
       body: JSON.stringify({ quantity: value }),
       headers: { "Content-Type": "application/json" }
@@ -26,7 +26,7 @@ class Cart extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:5000/shopping-cart")
+    fetch("/shopping-cart")
       .then(res => res.json())
       .then(arr =>
         this.setState({

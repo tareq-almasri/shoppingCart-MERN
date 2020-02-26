@@ -8,7 +8,7 @@ class Product extends Component {
 
   addToCart = () => {
     const { id } = this.props.match.params;
-    fetch(`http://localhost:5000/shopping-cart/${id}`, {
+    fetch(`/shopping-cart/${id}`, {
       method: "POST"
     })
       .then(response => response.json())
@@ -17,7 +17,7 @@ class Product extends Component {
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    fetch(`http://localhost:5000/product-view/${id}`)
+    fetch(`/product-view/${id}`)
       .then(res => res.json())
       .then(phoneObj => this.setState({ phoneObj }));
   }
