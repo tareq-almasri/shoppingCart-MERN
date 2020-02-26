@@ -36,7 +36,6 @@ footer {
     min-width: 300px;
     margin: 70px;
     padding: 3px;
-    border-radius: 50px;
     box-shadow: 15px 20px rgba(0, 0, 0, 0.466);
 }
 button a:hover {
