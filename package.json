@@ -11,7 +11,7 @@
   "author": "Tareq",
   "license": "DCI",
   "dependencies": {
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "concurrently": "^5.0.2",
     "cors": "^2.8.5",
