@@ -29,7 +29,7 @@ const connOptions = {
 // const dbName = "phones";
 // `mongodb://localhost/${dbName}`
 mongoose.connect(
-  "mongodb+srv://alef:hello123@cluster0-2yq8x.mongodb.net/e-shop?retryWrites=true&w=majority",
+  process.env.MONGODB_URI,
   connOptions
 );
 
